@@ -11,7 +11,7 @@ pipeline{
 		stage('Checkout'){
 			steps{
 				echo 'Cloning the repository'
-				git branch: 'main',url:'https://github.com/prudhvee001/sdet-mypractise-project.git'
+				git branch: 'main',url:'https://github.com/TestJenkins7/SamplePractice.git'
 				echo 'Cloned'
 			}
 			
@@ -20,7 +20,7 @@ pipeline{
 			steps{
 				echo 'building the project'
 				bat 'mvn clean install'
-				echo 'built'
+				echo 'build'
 			}
 		}
 		stage('Test'){
